@@ -1,0 +1,19 @@
+{
+  "name": "blog-post-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/falsy/blog-post-example.git"
+  },
+  "author": "falsylab <me@falsy.me>",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/falsy/blog-post-example/issues"
+  },
+  "homepage": "https://github.com/falsy/blog-post-example#readme"
+}
