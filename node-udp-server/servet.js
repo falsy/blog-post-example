@@ -3,7 +3,7 @@ const server = dgram.createSocket('udp4');
 const port = 4000;
 
 server.on('message', (message, info) => {
-  console.log(`message: ${message}`);
+  console.log(`message: ${message.toString()}`);
   console.log(`from address: ${info.address} port: ${info.port}`);
 });
 
