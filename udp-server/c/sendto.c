@@ -6,15 +6,15 @@
 #include <sys/socket.h>
 
 #define BUF_SIZE 30
+void error_handling(char *message);
 
 int main(int argc, char *argv[]) {
   int sock;
-  char msg1[] = "Hi!";
-  char msg2[] = "I'm another UDP host!";
-  char msg3[] = "Nice to meet you";
+  char message[BUF_SIZE];
+  int str_len;
+  socklen_t adr_sz;
 
-  struct sockaddr_in your_adr;
-  socklen_t you_adr_sz;
+  struct sockaddr_in serv_adr, from_adr;
 
   if(argc != 3) {
     printf("Usage : %s <IP> <port>\n", argv[0]);
@@ -22,16 +22,36 @@ int main(int argc, char *argv[]) {
   }
 
   sock = socket(PF_INET, SOCK_DGRAM, 0);
-  
-  memset(&your_adr, 0, sizeof(your_adr));
-  your_adr.sin_family = AF_INET;
-  your_adr.sin_addr.s_addr = inet_addr(argv[1]);
-  your_adr.sin_port=htons(atoi(argv[2]));
+  if(sock == -1) {
+    char msg1[] = "socket() error";
+    error_handling(msg1);
+  }
 
-  sendto(sock, msg1, sizeof(msg1), 0, (struct sockaddr*)&your_adr, sizeof(your_adr));
-  sendto(sock, msg2, sizeof(msg2), 0, (struct sockaddr*)&your_adr, sizeof(your_adr));
-  sendto(sock, msg3, sizeof(msg3), 0, (struct sockaddr*)&your_adr, sizeof(your_adr));
-  
+  memset(&serv_adr, 0, sizeof(serv_adr));
+  serv_adr.sin_family = AF_INET;
+  serv_adr.sin_addr.s_addr = inet_addr(argv[1]);
+  serv_adr.sin_port=htons(atoi(argv[2]));
+
+  while (1) {
+    char msg[] = "Inser message(q to quit): ";
+    fputs(msg, stdout);
+    fgets(message, sizeof(message), stdin);
+    char breakString[] = "q\n";
+    if(!strcmp(message, breakString)) break;
+
+    sendto(sock, message, sizeof(message), 0, (struct sockaddr*)&serv_adr, sizeof(serv_adr));
+    adr_sz = sizeof(from_adr);
+    str_len = recvfrom(sock, message, BUF_SIZE, 0, (struct sockaddr*)&from_adr, &adr_sz);
+    message[str_len] = 0;
+    printf("Message from server: %s", message);
+  }
+
   close(sock);
   return 0;
+}
+
+void error_handling(char *message) {
+  fputs(message, stderr);
+  fputc('\n', stderr);
+  exit(1);
 }
