@@ -5,7 +5,7 @@
 #include <arpa/inet.h>
 #include <sys/socket.h>
 
-#define BUF_SIZE 30
+#define BUF_SIZE 50
 void error_handling(char *message);
 
 int main(int argc, char *argv[]) {
@@ -33,17 +33,14 @@ int main(int argc, char *argv[]) {
   serv_adr.sin_port=htons(atoi(argv[2]));
 
   while (1) {
-    char msg[] = "Inser message(q to quit): ";
+    char msg[] = "Insert message(q to quit): ";
     fputs(msg, stdout);
     fgets(message, sizeof(message), stdin);
     char breakString[] = "q\n";
     if(!strcmp(message, breakString)) break;
 
     sendto(sock, message, sizeof(message), 0, (struct sockaddr*)&serv_adr, sizeof(serv_adr));
-    adr_sz = sizeof(from_adr);
-    str_len = recvfrom(sock, message, BUF_SIZE, 0, (struct sockaddr*)&from_adr, &adr_sz);
-    message[str_len] = 0;
-    printf("Message from server: %s", message);
+    printf("Send Message: %s", message);
   }
 
   close(sock);
