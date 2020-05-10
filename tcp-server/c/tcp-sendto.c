@@ -7,13 +7,14 @@
 #include <arpa/inet.h>
 
 #define PORT 6666
+#define BUF_SIZE 50
 
 int main(int argc, char const *argv[])
 {
     int sock = 0; long valread;
     struct sockaddr_in serv_addr;
-    char *hello = "Hello from client";
-    char buffer[1024] = {0};
+    char message[BUF_SIZE];
+    
     if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0)
     {
         printf("\n Socket creation error \n");
@@ -37,10 +38,13 @@ int main(int argc, char const *argv[])
         printf("\nConnection Failed \n");
         return -1;
     }
-    send(sock , hello , strlen(hello) , 0 );
-    printf("Hello message sent\n");
-    valread = read( sock , buffer, 1024);
-    printf("%s\n",buffer );
+
+    char msg[] = "Insert message(q to quit): ";
+    fputs(msg, stdout);
+    fgets(message, sizeof(message), stdin);
+
+    send(sock , message , strlen(message) , 0 );
+    printf("Send Message: %s", message);
     return 0;
 }
 

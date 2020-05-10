@@ -6,14 +6,17 @@
 #include <string.h>
 
 #define PORT 6666
+#define BUF_SIZE 5
+
 int main(int argc, char const *argv[])
 {
     int server_fd, new_socket; long valread;
     struct sockaddr_in address;
     int addrlen = sizeof(address);
+    char message[BUF_SIZE];
 
     // Only this line has been changed. Everything is same.
-    char *hello = "HTTP/1.1 200 OK\nContent-Type: text/plain\nContent-Length: 12\n\nHello world!";
+    // char *hello = "HTTP/1.1 200 OK\nContent-Type: text/plain\nContent-Length: 12\n\nHello world!";
 
     // Creating socket file descriptor
     if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0)
@@ -49,11 +52,11 @@ int main(int argc, char const *argv[])
             exit(EXIT_FAILURE);
         }
 
-        char buffer[30000] = {0};
-        valread = read( new_socket , buffer, 30000);
-        printf("%s\n",buffer );
-        write(new_socket , hello , strlen(hello));
-        printf("------------------Hello message sent-------------------");
+        // char buffer[30000] = {0};
+        valread = read(new_socket , message, BUF_SIZE);
+        printf("%s\n", message );
+        // write(new_socket , hello , strlen(hello));
+        // printf("------------------Hello message sent-------------------");
         close(new_socket);
     }
     return 0;
