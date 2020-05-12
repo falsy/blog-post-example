@@ -5,8 +5,6 @@
 #include <arpa/inet.h>
 #include <sys/socket.h>
 
-#define BUF_SIZE 
-
 int main(int argc, char *argv[]) {
   int sock;
   char message[1024] = {0};
