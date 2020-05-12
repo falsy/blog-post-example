@@ -5,11 +5,12 @@
 #include <arpa/inet.h>
 #include <sys/socket.h>
 
-#define BUF_SIZE 50
+#define BUF_SIZE 
 
 int main(int argc, char *argv[]) {
   int sock;
-  char message[BUF_SIZE];
+  char message[1024] = {0};
+  char res_message[1024] = {0};
   int str_len;
   socklen_t adr_sz;
 
@@ -28,11 +29,14 @@ int main(int argc, char *argv[]) {
   serv_adr.sin_port=htons(atoi(argv[2]));
 
   
-  char msg[] = "Insert message(q to quit): ";
+  char msg[] = "Request message: ";
   fputs(msg, stdout);
   fgets(message, sizeof(message), stdin);
 
   sendto(sock, message, sizeof(message), 0, (struct sockaddr*)&serv_adr, sizeof(serv_adr));
-  printf("Send Message: %s", message);
+  adr_sz = sizeof(from_adr);
+  str_len = recvfrom(sock, res_message, 1024, 0, (struct sockaddr*)&from_adr, &adr_sz);
+  printf("Response message: %s", res_message);
+
   return 0;
 }
