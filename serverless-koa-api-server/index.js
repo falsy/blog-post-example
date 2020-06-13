@@ -1,3 +1,4 @@
+const serverless = require('serverless-http');
 const Koa = require("koa");
 const Router = require("koa-router");
 const cors = require('@koa/cors');
@@ -16,6 +17,4 @@ router.get('/test2', (ctx) => {
 
 app.use(router.routes());
 
-app.listen(4000, () => {
-  console.log(`Server is running on port 4000!`);
-});
+module.exports.handler = serverless(app);
