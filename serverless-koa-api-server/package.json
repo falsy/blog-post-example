@@ -1,0 +1,23 @@
+{
+  "name": "test-api-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/falsy/blog-post-example.git"
+  },
+  "author": "falsy",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/falsy/blog-post-example/issues"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "koa": "^2.11.0",
+    "koa-router": "^8.0.8"
+  }
+}
