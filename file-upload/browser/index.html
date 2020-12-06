@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>file upload</title>
+  </head>
+  <body>
+    <input id="upload" type="file" accept="image/png, image/jpg">
+    <button id="btn">Send</button>
+    <script>
+      const btn = document.getElementById('btn');
+      const file = document.getElementById('upload');
+
+      btn.addEventListener('click', () => {
+        console.log(file.files[0]);
+      });
+    </script>
+  </body>
+</html>
