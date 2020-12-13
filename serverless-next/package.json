@@ -1,0 +1,26 @@
+{
+  "name": "typescript-serverless-nextjs",
+  "version": "1.0.0",
+  "description": "typescript serverless nextjs react boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "deploy": "serverless"
+  },
+  "author": "falsy",
+  "license": "WTFPL",
+  "dependencies": {
+    "next": "^10.0.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "ts-jest": "^26.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.46",
+    "@types/react-dom": "^16.9.8",
+    "serverless": "^2.15.0",
+    "typescript": "^3.9.7"
+  }
+}
