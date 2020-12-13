@@ -1,0 +1,9 @@
+falsyExempleServerlessNext:
+  component: '@sls-next/serverless-component@1.18.0'
+  inputs:
+	  bucketName: 'falsy-exemple-s3'
+	  cloudfront:
+	    distributionId: ABCDEFG..
+	  name:
+	    defaultLambda: 'falsy-exemple-default-lambda'
+	    apiLambda: 'falsy-exemple-api-lambda'
