@@ -1,16 +1,9 @@
-service: ts-serverless-nextjs
-provider:
-  name: aws
-  runtime: nodejs12.x
-  stage: dev
-  region: ap-northeast-2
-plugins:
-  - serverless-nextjs-plugin
-custom:
-  name: ts-serverless-nextjs
-  serverless-nextjs:
-    assetsBucketName: "ts-serverless-nextjs-${self:provider.stage}"
-    cloudFront: true
-package:
-  exclude:
-    - ./**
+falsyExempleServerlessNext:
+  component: '@sls-next/serverless-component@1.18.0'
+  inputs:
+	  bucketName: 'falsy-exemple-s3'
+	  cloudfront:
+	    distributionId: ABCDEFG..
+	  name:
+	    defaultLambda: 'falsy-exemple-default-lambda'
+	    apiLambda: 'falsy-exemple-api-lambda'
