@@ -5,3 +5,5 @@ package-lock.json
 .next
 .serverless
 .serverless_nextjs
+
+*/package-lock.json
