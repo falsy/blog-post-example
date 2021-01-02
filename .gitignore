@@ -1,7 +1,6 @@
 .DS_Store
 .vscode
 node_modules
-package-lock.json
 .next
 .serverless
 .serverless_nextjs
