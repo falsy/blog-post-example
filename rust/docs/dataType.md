@@ -73,8 +73,8 @@ length | Signed | UnSigned
 64-bit | i64 | u64  
 arch | isize | usize  
 
-( i8 = -128 에서 127 까지의 값 ) -(2<sup>n - 1</sup>) ~ 2<sup>n - 1</sup> - 1
-( u8 = 0 에서 255 까지의 값 ) 0 ~ 2<sup>n</sup> - 1
+( i8 = -128 에서 127 까지의 값 ) -(2<sup>n - 1</sup>) ~ 2<sup>n - 1</sup> - 1  
+( u8 = 0 에서 255 까지의 값 ) 0 ~ 2<sup>n</sup> - 1  
 isize와 usize는 프로그램이 동작하는 컴퓨터 환경에 따라 결정됨  
 
 // Rust 기본값은 i32이며 확실하게 정해지지 않은 경우라면 일반적으로 많이 사용하고 빠름
