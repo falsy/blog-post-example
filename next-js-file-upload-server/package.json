@@ -1,0 +1,15 @@
+{
+  "name": "next-js-file-upload-mock-server",
+  "version": "1.0.0",
+  "description": "next js file upload mock server",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "author": "falsy",
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "@koa/router": "^10.0.0",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0"
+  }
+}
