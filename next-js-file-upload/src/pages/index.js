@@ -6,13 +6,8 @@ const Index = () => {
     const formData = new FormData()
     formData.append('file', file)
 
-    console.log(formData)
-
     const res = await fetch('/api/upload', {
       method: 'POST',
-      // headers: new Headers({
-      //   'Content-Type': 'application/json'
-      // }),
       body: formData
     })
 
@@ -20,7 +15,8 @@ const Index = () => {
   }
 
   const handleChangeFile = (e) => {
-    uploadFile(e.target.files)
+    const [file] = [...e.target.files]
+    uploadFile(file)
   }
 
   return (
