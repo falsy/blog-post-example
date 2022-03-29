@@ -1,0 +1,18 @@
+{
+  "name": "image-upload-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next"
+  },
+  "author": "falsy",
+  "license": "WTFPL",
+  "dependencies": {
+    "form-data": "^4.0.0",
+    "formidable": "^2.0.1",
+    "next": "^11.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
