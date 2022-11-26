@@ -28,7 +28,7 @@ import {
 import messaging from '@react-native-firebase/messaging';
 
 messaging().setBackgroundMessageHandler(async remoteMessage => {
-  console.log('setBackgroundMessageHandler', remoteMessage);
+  console.log('[Background Remote Message]', remoteMessage);
 });
 
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
