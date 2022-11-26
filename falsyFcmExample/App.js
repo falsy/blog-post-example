@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -24,6 +24,12 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
+import messaging from '@react-native-firebase/messaging';
+
+messaging().setBackgroundMessageHandler(async remoteMessage => {
+  console.log('setBackgroundMessageHandler', remoteMessage);
+});
 
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
  * LTI update could not be added via codemod */
@@ -59,6 +65,19 @@ const App = () => {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+
+  const getFcmToken = async () => {
+    const fcmToken = await messaging().getToken();
+    console.log('[FCM Token] ', fcmToken);
+  };
+
+  useEffect(() => {
+    getFcmToken();
+    const unsubscribe = messaging().onMessage(async remoteMessage => {
+      console.log('[Remote Message] ', JSON.stringify(remoteMessage));
+    });
+    return unsubscribe;
+  }, []);
 
   return (
     <SafeAreaView style={backgroundStyle}>
