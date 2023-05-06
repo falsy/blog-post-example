@@ -1,5 +1,5 @@
-const path = require("path");
-const HTMLWeebPackPlugin = require('html-webpack-plugin');
+const path = require("path")
+const HTMLWeebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: ['./src/index.tsx'],
@@ -35,4 +35,4 @@ module.exports = {
       filename: './index.html'
     })
   ]
-};
+}
