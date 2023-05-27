@@ -1,0 +1,18 @@
+service: nest-serverless-example
+
+frameworkVersion: '3'
+
+plugins:
+
+provider:
+  name: aws
+  region: ap-northeast-2
+  runtime: nodejs16.x
+
+functions:
+  api:
+    handler: dist/lambda.handler
+    events:
+      - http:
+          method: any
+          path: /{proxy+}
