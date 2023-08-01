@@ -3,7 +3,9 @@ import React from "react"
 const App = () => {
 
   const handleClickNewWebview = () => {
-    window.Android.newWebView('https://falsy.me/')
+    if(window.Android) {
+      window.Android.newWebView('https://falsy.me/')
+    }
   }
 
   return (
