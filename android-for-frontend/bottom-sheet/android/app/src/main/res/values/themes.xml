@@ -15,7 +15,7 @@
         <item name="bottomSheetDialogTheme">@style/ModalBottomSheetDialog</item>
     </style>
 
-    <style name="ModalBottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+    <style name="ModalBottomSheetDialog" parent="ThemeOverlay.MaterialComponents.DayNight.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/ModalBottomSheet</item>
     </style>
 
