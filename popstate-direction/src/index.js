@@ -1,13 +1,10 @@
-import { useRef, useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import ReactDOM from 'react-dom/client'
 
 const container = document.getElementById('wrap')
 const root = ReactDOM.createRoot(container)
 
 const App = () => {
-  const pushState = useRef(window.history.pushState)
-  const replaceState = useRef(window.history.replaceState)
-
   const [historyIndex, setHistoryIndex] = useState(0)
   const [direction, setDirection] = useState('None')
 
@@ -24,24 +21,24 @@ const App = () => {
     window.history.pushState = (state, ...arg) => {
       const index = historyIndex + 1
       setHistoryIndex(index)
-      return pushState.current.apply(
+      return History.prototype.pushState.apply(
         window.history, 
         [{ ...state, index }, ...arg]
       )
     }
     window.history.replaceState = (state, ...arg) => {
-      return replaceState.current.apply(
+      return History.prototype.replaceState.apply(
         window.history, 
         [{ ...state, index: historyIndex }, ...arg]
       )
     }
-    window.addEventListener('popstate', popState)
+    window.addEventListener('popstate', onPopstate)
     return () => {
-      window.removeEventListener('popstate', popState)
+      window.removeEventListener('popstate', onPopstate)
     }
   }, [historyIndex])
 
-  const popState = useCallback(() => {
+  const onPopstate = useCallback(() => {
     const { state } = window.history
     if (!state) window.history.replaceState({ index: historyIndex + 1 }, '')
 
