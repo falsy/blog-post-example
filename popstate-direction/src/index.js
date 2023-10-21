@@ -43,9 +43,9 @@ const App = () => {
 
   const popState = useCallback(() => {
     const { state } = window.history
-    if (typeof state?.index === 'undefined') window.history.replaceState({ index: historyIndex + 1 }, '')
+    if (!state) window.history.replaceState({ index: historyIndex + 1 }, '')
 
-    const index = (typeof state?.index === 'undefined') ? historyIndex + 1 : state.index
+    const index = state ? state.index : historyIndex + 1
     setHistoryIndex(index)
     setDirection(index > historyIndex ? 'forward' : 'back')
   }, [historyIndex])
