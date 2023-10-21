@@ -50,17 +50,13 @@ const App = () => {
     setDirection(index > historyIndex ? 'forward' : 'back')
   }, [historyIndex])
 
-  const handleClickLink = useCallback((hash) => {
-    window.history.pushState({}, '', hash)
-  }, [])
-
   return (
     <div>
       <h1>Direction: {direction}</h1>
       <ul>
-        <li onClick={() => handleClickLink('#1')}>#1</li>
-        <li onClick={() => handleClickLink('#2')}>#2</li>
-        <li onClick={() => handleClickLink('#3')}>#3</li>
+        <li onClick={() => window.history.pushState({}, '', '#1')}>#1</li>
+        <li onClick={() => window.history.pushState({}, '', '#2')}>#2</li>
+        <li onClick={() => window.history.pushState({}, '', '#3')}>#3</li>
       </ul>
     </div>
   )
