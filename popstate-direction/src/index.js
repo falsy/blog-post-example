@@ -26,13 +26,13 @@ const App = () => {
       setHistoryIndex(index)
       return pushState.current.apply(
         window.history, 
-        [{...state, index }, ...arg]
+        [{ ...state, index }, ...arg]
       )
     }
     window.history.replaceState = (state, ...arg) => {
       return replaceState.current.apply(
         window.history, 
-        [{...state, index: historyIndex }, ...arg]
+        [{ ...state, index: historyIndex }, ...arg]
       )
     }
     window.addEventListener('popstate', popState)
@@ -43,9 +43,9 @@ const App = () => {
 
   const popState = useCallback(() => {
     const { state } = window.history
-    if (!state) window.history.replaceState({ index: historyIndex + 1 }, '')
+    if (typeof state?.index === 'undefined') window.history.replaceState({ index: historyIndex + 1 }, '')
 
-    const index = state ? state.index : historyIndex + 1
+    const index = (typeof state?.index === 'undefined') ? historyIndex + 1 : state.index
     setHistoryIndex(index)
     setDirection(index > historyIndex ? 'forward' : 'back')
   }, [historyIndex])
