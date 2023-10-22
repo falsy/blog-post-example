@@ -9,7 +9,7 @@ const App = () => {
   const [direction, setDirection] = useState('None')
 
   useEffect(() => {
-    const index = window.history?.state?.index
+    const index = window.history.state?.index
     if(index) {
       setHistoryIndex(index)
     } else {
