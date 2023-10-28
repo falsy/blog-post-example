@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "start": "craco start"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@craco/craco": "^5.9.0",
+    "@testing-library/react": "^14.0.0",
+    "i18next": "^23.6.0",
+    "react-i18next": "^13.3.1"
+  }
+}
