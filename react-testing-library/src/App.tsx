@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
 export default () => {
-
   const [display, setDisplay] = useState(false)
 
   const handleClickDisplay = () => {
