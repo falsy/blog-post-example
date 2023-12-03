@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "jsx": "react",
+    "declaration": true,
+    "declarationDir": "types",
+    "outDir": "dist",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "."
+  },
+  "exclude": [
+    "node_modules",
+    "types"
+  ]
+}
