@@ -16,7 +16,7 @@
     "url": "https://github.com/falsy/blog-post-example/issues"
   },
   "dependencies": {
-    "@koa/cors": "^3.1.0",
+    "@koa/cors": "^5.0.0",
     "koa": "^2.11.0",
     "koa-router": "^8.0.8",
     "serverless-http": "^2.5.0"
