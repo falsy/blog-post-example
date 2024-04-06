@@ -15,7 +15,7 @@ struct TextFieldView: View {
     VStack {
       Text(isDisableBackSpace ? "백스페이스 비활성화 상태" : "백스페이스 활성화 상태")
       CustomTextField(isDisableBackSpace: $isDisableBackSpace)
-        .padding(50)
+        .padding(10)
       Button {
         isDisableBackSpace.toggle()
       } label: {

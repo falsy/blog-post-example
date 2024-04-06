@@ -13,6 +13,9 @@
 		A139B2112BC114480089C7D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A139B2102BC114480089C7D9 /* Preview Assets.xcassets */; };
 		A139B2192BC1229E0089C7D9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A139B2182BC1229E0089C7D9 /* CustomTextField.swift */; };
 		A139B21B2BC128740089C7D9 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A139B21A2BC128740089C7D9 /* TextFieldView.swift */; };
+		A139B21D2BC13C3C0089C7D9 /* HostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A139B21C2BC13C3C0089C7D9 /* HostingView.swift */; };
+		A139B21F2BC13D200089C7D9 /* HostingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A139B21E2BC13D200089C7D9 /* HostingContentView.swift */; };
+		A139B2212BC13D690089C7D9 /* CustomHostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A139B2202BC13D690089C7D9 /* CustomHostingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		A139B2122BC114480089C7D9 /* macOSProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOSProject.entitlements; sourceTree = "<group>"; };
 		A139B2182BC1229E0089C7D9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		A139B21A2BC128740089C7D9 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		A139B21C2BC13C3C0089C7D9 /* HostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingView.swift; sourceTree = "<group>"; };
+		A139B21E2BC13D200089C7D9 /* HostingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingContentView.swift; sourceTree = "<group>"; };
+		A139B2202BC13D690089C7D9 /* CustomHostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHostingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +62,9 @@
 		A139B2062BC114470089C7D9 /* macOSProject */ = {
 			isa = PBXGroup;
 			children = (
+				A139B2232BC140440089C7D9 /* HostingViewEx */,
+				A139B2222BC140290089C7D9 /* TextFieldEx */,
 				A139B2072BC114470089C7D9 /* macOSProjectApp.swift */,
-				A139B2182BC1229E0089C7D9 /* CustomTextField.swift */,
-				A139B21A2BC128740089C7D9 /* TextFieldView.swift */,
 				A139B2092BC114470089C7D9 /* ContentView.swift */,
 				A139B20D2BC114480089C7D9 /* Assets.xcassets */,
 				A139B2122BC114480089C7D9 /* macOSProject.entitlements */,
@@ -73,6 +79,25 @@
 				A139B2102BC114480089C7D9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A139B2222BC140290089C7D9 /* TextFieldEx */ = {
+			isa = PBXGroup;
+			children = (
+				A139B2182BC1229E0089C7D9 /* CustomTextField.swift */,
+				A139B21A2BC128740089C7D9 /* TextFieldView.swift */,
+			);
+			path = TextFieldEx;
+			sourceTree = "<group>";
+		};
+		A139B2232BC140440089C7D9 /* HostingViewEx */ = {
+			isa = PBXGroup;
+			children = (
+				A139B2202BC13D690089C7D9 /* CustomHostingView.swift */,
+				A139B21C2BC13C3C0089C7D9 /* HostingView.swift */,
+				A139B21E2BC13D200089C7D9 /* HostingContentView.swift */,
+			);
+			path = HostingViewEx;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,10 +170,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A139B2212BC13D690089C7D9 /* CustomHostingView.swift in Sources */,
 				A139B20A2BC114470089C7D9 /* ContentView.swift in Sources */,
 				A139B2082BC114470089C7D9 /* macOSProjectApp.swift in Sources */,
 				A139B21B2BC128740089C7D9 /* TextFieldView.swift in Sources */,
+				A139B21D2BC13C3C0089C7D9 /* HostingView.swift in Sources */,
 				A139B2192BC1229E0089C7D9 /* CustomTextField.swift in Sources */,
+				A139B21F2BC13D200089C7D9 /* HostingContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
