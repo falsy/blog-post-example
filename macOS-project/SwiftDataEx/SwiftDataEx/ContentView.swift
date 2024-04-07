@@ -54,6 +54,12 @@ struct ContentView: View {
       } label: {
         Text("글 추가")
       }
+      
+      Rectangle()
+        .frame(maxWidth: .infinity, maxHeight: 10)
+        .foregroundColor(.blue)
+      
+      UpsertSwiftData()
     }
   }
 }

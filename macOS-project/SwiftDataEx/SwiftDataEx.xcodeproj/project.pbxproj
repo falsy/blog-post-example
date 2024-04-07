@@ -19,6 +19,7 @@
 		A139B24C2BC1FB3F0089C7D9 /* DeletePostSwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A139B24B2BC1FB3F0089C7D9 /* DeletePostSwiftData.swift */; };
 		A139B24E2BC208890089C7D9 /* FilterSwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A139B24D2BC208890089C7D9 /* FilterSwiftData.swift */; };
 		A139B2502BC20AF90089C7D9 /* TransientSwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A139B24F2BC20AF90089C7D9 /* TransientSwiftData.swift */; };
+		A139B2522BC267BE0089C7D9 /* UpsertSwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A139B2512BC267BE0089C7D9 /* UpsertSwiftData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		A139B24B2BC1FB3F0089C7D9 /* DeletePostSwiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostSwiftData.swift; sourceTree = "<group>"; };
 		A139B24D2BC208890089C7D9 /* FilterSwiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSwiftData.swift; sourceTree = "<group>"; };
 		A139B24F2BC20AF90089C7D9 /* TransientSwiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransientSwiftData.swift; sourceTree = "<group>"; };
+		A139B2512BC267BE0089C7D9 /* UpsertSwiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpsertSwiftData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				A139B24B2BC1FB3F0089C7D9 /* DeletePostSwiftData.swift */,
 				A139B24D2BC208890089C7D9 /* FilterSwiftData.swift */,
 				A139B24F2BC20AF90089C7D9 /* TransientSwiftData.swift */,
+				A139B2512BC267BE0089C7D9 /* UpsertSwiftData.swift */,
 			);
 			path = SwiftDataEx;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				A139B24E2BC208890089C7D9 /* FilterSwiftData.swift in Sources */,
 				A139B2422BC1BE2C0089C7D9 /* Post.swift in Sources */,
 				A139B24A2BC1F6C40089C7D9 /* CascadeSwiftData.swift in Sources */,
+				A139B2522BC267BE0089C7D9 /* UpsertSwiftData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
