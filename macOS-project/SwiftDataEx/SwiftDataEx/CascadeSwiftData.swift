@@ -50,6 +50,16 @@ struct CascadeSwiftData: View {
           }
         }
       }
+      Divider()
+      Button("글 추가") {
+        do {
+          modelContext.insert(Post(title: "Post-\(posts.count)", content: "Content-\(posts.count)"))
+          try modelContext.save()
+        } catch {
+          print("error")
+        }
+      }
+      Divider()
       Text("모든 댓글")
       ForEach(comments) { comment in
         Text("\(comment.content) / \("") / \(comment.createdAt)")

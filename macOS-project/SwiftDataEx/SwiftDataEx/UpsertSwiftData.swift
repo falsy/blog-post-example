@@ -33,7 +33,6 @@ struct UpsertSwiftData: View {
         }
       }
       Divider()
-      Text("\(updateCnt)")
       Button("UPSERT 글 추가") {
         do {
           modelContext.insert(Post(id: uuid, title: "Post-\(updateCnt)", content: "Content-\(updateCnt)"))
