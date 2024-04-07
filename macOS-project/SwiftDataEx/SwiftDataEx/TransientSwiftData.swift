@@ -23,7 +23,7 @@ struct TransientSwiftData: View {
           }
           if post.isShowComment {
             Divider()
-            ForEach(post.comments.sorted { $0.createdAt > $1.createdAt }) {comment in
+            ForEach(post.comments) {comment in
               HStack {
                 Text("\(comment.content) / \(comment.createdAt)")
               }

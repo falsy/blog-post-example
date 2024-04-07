@@ -12,6 +12,7 @@ import SwiftData
 class Comment {
   @Attribute(.unique)
   var id: UUID
+  @Relationship 
   var post: Post?
   var content: String
   var createdAt: Date

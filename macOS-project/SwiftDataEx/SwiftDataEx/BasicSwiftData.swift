@@ -49,6 +49,17 @@ struct BasicSwiftData: View {
           }
         }
       }
+      Divider()
+      Button {
+        do {
+          modelContext.insert(Post(title: "Post-\(posts.count)", content: "Content-\(posts.count)"))
+          try modelContext.save()
+        } catch {
+          print("error")
+        }
+      } label: {
+        Text("글 추가")
+      }
     }
   }
 }
