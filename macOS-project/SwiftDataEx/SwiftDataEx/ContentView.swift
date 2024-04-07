@@ -49,10 +49,13 @@ struct ContentView: View {
       CascadeSwiftData()
       
       Divider()
-      Button {
-        modelContext.insert(Post(title: "Post-\(posts.count)", content: "Content-\(posts.count)"))
-      } label: {
-        Text("글 추가")
+      Button("글 추가") {
+        do {
+          modelContext.insert(Post(title: "Post-\(posts.count)", content: "Content-\(posts.count)"))
+          try modelContext.save()
+        } catch {
+          print("error")
+        }
       }
       
       Rectangle()
