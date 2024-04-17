@@ -1,0 +1,352 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10DDD9C2BD072F7003E159A /* WebViewImgDownloadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10DDD9B2BD072F7003E159A /* WebViewImgDownloadApp.swift */; };
+		A10DDD9E2BD072F7003E159A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10DDD9D2BD072F7003E159A /* ContentView.swift */; };
+		A10DDDA22BD072F8003E159A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10DDDA12BD072F8003E159A /* Assets.xcassets */; };
+		A10DDDA52BD072F8003E159A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10DDDA42BD072F8003E159A /* Preview Assets.xcassets */; };
+		A10DDDAD2BD073B6003E159A /* ExWebview.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10DDDAC2BD073B6003E159A /* ExWebview.swift */; };
+		A10DDDAF2BD0785A003E159A /* ExWKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10DDDAE2BD0785A003E159A /* ExWKWebView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A10DDD982BD072F7003E159A /* WebViewImgDownload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewImgDownload.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10DDD9B2BD072F7003E159A /* WebViewImgDownloadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewImgDownloadApp.swift; sourceTree = "<group>"; };
+		A10DDD9D2BD072F7003E159A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A10DDDA12BD072F8003E159A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A10DDDA42BD072F8003E159A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A10DDDA62BD072F8003E159A /* WebViewImgDownload.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WebViewImgDownload.entitlements; sourceTree = "<group>"; };
+		A10DDDAC2BD073B6003E159A /* ExWebview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExWebview.swift; sourceTree = "<group>"; };
+		A10DDDAE2BD0785A003E159A /* ExWKWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExWKWebView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A10DDD952BD072F7003E159A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A10DDD8F2BD072F7003E159A = {
+			isa = PBXGroup;
+			children = (
+				A10DDD9A2BD072F7003E159A /* WebViewImgDownload */,
+				A10DDD992BD072F7003E159A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A10DDD992BD072F7003E159A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A10DDD982BD072F7003E159A /* WebViewImgDownload.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A10DDD9A2BD072F7003E159A /* WebViewImgDownload */ = {
+			isa = PBXGroup;
+			children = (
+				A10DDD9B2BD072F7003E159A /* WebViewImgDownloadApp.swift */,
+				A10DDD9D2BD072F7003E159A /* ContentView.swift */,
+				A10DDDAC2BD073B6003E159A /* ExWebview.swift */,
+				A10DDDAE2BD0785A003E159A /* ExWKWebView.swift */,
+				A10DDDA12BD072F8003E159A /* Assets.xcassets */,
+				A10DDDA62BD072F8003E159A /* WebViewImgDownload.entitlements */,
+				A10DDDA32BD072F8003E159A /* Preview Content */,
+			);
+			path = WebViewImgDownload;
+			sourceTree = "<group>";
+		};
+		A10DDDA32BD072F8003E159A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A10DDDA42BD072F8003E159A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A10DDD972BD072F7003E159A /* WebViewImgDownload */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10DDDA92BD072F8003E159A /* Build configuration list for PBXNativeTarget "WebViewImgDownload" */;
+			buildPhases = (
+				A10DDD942BD072F7003E159A /* Sources */,
+				A10DDD952BD072F7003E159A /* Frameworks */,
+				A10DDD962BD072F7003E159A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebViewImgDownload;
+			productName = WebViewImgDownload;
+			productReference = A10DDD982BD072F7003E159A /* WebViewImgDownload.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A10DDD902BD072F7003E159A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					A10DDD972BD072F7003E159A = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = A10DDD932BD072F7003E159A /* Build configuration list for PBXProject "WebViewImgDownload" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A10DDD8F2BD072F7003E159A;
+			productRefGroup = A10DDD992BD072F7003E159A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10DDD972BD072F7003E159A /* WebViewImgDownload */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A10DDD962BD072F7003E159A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10DDDA52BD072F8003E159A /* Preview Assets.xcassets in Resources */,
+				A10DDDA22BD072F8003E159A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A10DDD942BD072F7003E159A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10DDDAF2BD0785A003E159A /* ExWKWebView.swift in Sources */,
+				A10DDDAD2BD073B6003E159A /* ExWebview.swift in Sources */,
+				A10DDD9E2BD072F7003E159A /* ContentView.swift in Sources */,
+				A10DDD9C2BD072F7003E159A /* WebViewImgDownloadApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A10DDDA72BD072F8003E159A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A10DDDA82BD072F8003E159A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		A10DDDAA2BD072F8003E159A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WebViewImgDownload/WebViewImgDownload.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WebViewImgDownload/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = falsy.WebViewImgDownload;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A10DDDAB2BD072F8003E159A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WebViewImgDownload/WebViewImgDownload.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WebViewImgDownload/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = falsy.WebViewImgDownload;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A10DDD932BD072F7003E159A /* Build configuration list for PBXProject "WebViewImgDownload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10DDDA72BD072F8003E159A /* Debug */,
+				A10DDDA82BD072F8003E159A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10DDDA92BD072F8003E159A /* Build configuration list for PBXNativeTarget "WebViewImgDownload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10DDDAA2BD072F8003E159A /* Debug */,
+				A10DDDAB2BD072F8003E159A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A10DDD902BD072F7003E159A /* Project object */;
+}
