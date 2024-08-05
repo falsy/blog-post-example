@@ -7,7 +7,6 @@ from tensorflow.keras.applications import ResNet50
 from tensorflow.keras.layers import Dense, GlobalAveragePooling2D
 from tensorflow.keras.models import Model
 from tensorflow.keras.optimizers import Adam
-from PIL import Image
 
 # 데이터 경로 설정
 train_dir = 'dataset/train'
@@ -21,7 +20,6 @@ train_datagen = ImageDataGenerator(
     rotation_range=40,
     width_shift_range=0.2,
     height_shift_range=0.2,
-    vertical_flip=True,
     horizontal_flip=True,
     fill_mode='nearest'
 )
