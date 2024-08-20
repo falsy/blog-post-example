@@ -1,0 +1,28 @@
+{
+  "name": "sequelize-quick-start",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/falsy/sequelize-quick-start.git"
+  },
+  "author": "falsy.me <me@falsy.me>",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/falsy/sequelize-quick-start/issues"
+  },
+  "homepage": "https://github.com/falsy/sequelize-quick-start#readme",
+  "dependencies": {
+    "@koa/cors": "^3.0.0",
+    "koa": "^2.7.0",
+    "koa-body": "^4.1.0",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "mysql2": "^2.0.2",
+    "sequelize": "^5.21.3"
+  }
+}

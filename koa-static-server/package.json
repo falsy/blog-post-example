@@ -1,0 +1,24 @@
+{
+  "name": "koa-static-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/falsy/koa-static-server.git"
+  },
+  "author": "falsy.me <me@falsy.me>",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/falsy/koa-static-server/issues"
+  },
+  "homepage": "https://github.com/falsy/koa-static-server#readme",
+  "dependencies": {
+    "koa": "^2.6.2",
+    "koa-send": "^5.0.0",
+    "koa-static": "^5.0.0"
+  }
+}

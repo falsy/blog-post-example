@@ -1,0 +1,27 @@
+{
+  "name": "dotenv-webpack-front-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "local": "webpack-dev-server --mode development --stage local",
+    "server": "webpack-dev-server --mode development --stage server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/falsy/dotenv-webpack-front-end.git"
+  },
+  "author": "falsy.me <me@falsy.me>",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/falsy/dotenv-webpack-front-end/issues"
+  },
+  "homepage": "https://github.com/falsy/dotenv-webpack-front-end#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.3.1"
+  }
+}

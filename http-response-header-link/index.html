@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>HTTP-RESPONSE-HEADER-LINK</title>
+		<meta charset="UTF-8" />
+	</head>
+	<body>
+		<script>
+			fetch('http://localhost:9999/link-test', {
+        method: 'GET'
+      }).then(res => {
+        res.headers.forEach((value, name) => {
+          console.log(`${name  }: ${  value}`);
+        });
+        return res.json();
+      })
+		</script>
+	</body>
+</html>

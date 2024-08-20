@@ -1,0 +1,1 @@
+export const SET_FINGER = 'SET_FINGER';
