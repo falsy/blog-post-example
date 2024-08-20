@@ -1,0 +1,13 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 'add actions test'
+      uses: falsy/github-custom-actions@master
+      id: test
