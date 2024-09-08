@@ -4,10 +4,13 @@ const udpServer = dgram.createSocket("udp4")
 
 udpServer.on("message", (msg, rinfo) => {
   console.log(`UDP 요청: ${msg}`)
-  const response = `UDP 응답: ${msg}`
-  udpServer.send(response, rinfo.port, rinfo.address, (err) => {
-    if (err) console.error("UDP 전송 오류:", err)
-  })
+  // 통신 지연 시뮬레이션
+  setTimeout(() => {
+    const response = `UDP 응답: ${msg}`
+    udpServer.send(response, rinfo.port, rinfo.address, (err) => {
+      if (err) console.error("UDP 전송 오류:", err)
+    })
+  }, Math.random() * 5000)
 })
 
 udpServer.bind(7000, () => {

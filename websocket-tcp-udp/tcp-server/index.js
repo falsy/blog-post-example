@@ -1,11 +1,12 @@
 const net = require("net")
 
 const tcpServer = net.createServer((socket) => {
-  console.log("TCP 연결")
-
   socket.on("data", (data) => {
     console.log(`TCP 요청: ${data}`)
-    socket.write(`TCP 응답: ${data}`)
+    // 통신 지연 시뮬레이션
+    setTimeout(() => {
+      socket.write(`TCP 응답: ${data}`)
+    }, Math.random() * 5000)
   })
 
   socket.on("close", () => {

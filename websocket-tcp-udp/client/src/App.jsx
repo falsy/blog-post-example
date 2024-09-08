@@ -10,6 +10,7 @@ export default function App() {
 
   const sendMessage = () => {
     ws.current.send(message)
+    setMessage("")
   }
 
   useEffect(() => {
@@ -41,6 +42,11 @@ export default function App() {
           placeholder="message"
           value={message}
           onChange={handleChange}
+          onKeyPress={(e) => {
+            if (e.key === "Enter") {
+              sendMessage()
+            }
+          }}
         />
         <button onClick={sendMessage}>Send</button>
       </div>
