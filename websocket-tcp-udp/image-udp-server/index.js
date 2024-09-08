@@ -1,7 +1,7 @@
 const dgram = require("dgram")
 
 const udpServer = dgram.createSocket("udp4")
-const CHUNK_SIZE = 8 * 1024 // 8KB
+const CHUNK_SIZE = 6 * 1024 // 6KB
 
 udpServer.on("message", (message, rinfo) => {
   let offset = 0

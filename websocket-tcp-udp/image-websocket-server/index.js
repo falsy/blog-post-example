@@ -4,7 +4,7 @@ const dgram = require("dgram")
 const wss = new WebSocket.Server({ port: 8080 })
 const udpClient = dgram.createSocket("udp4")
 
-const CHUNK_SIZE = 8 * 1024 // 8KB
+const CHUNK_SIZE = 6 * 1024 // 6KB
 
 // UDP 서버로부터 응답 수신
 udpClient.on("message", (msg, rinfo) => {

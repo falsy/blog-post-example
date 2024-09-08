@@ -76,23 +76,25 @@ export default function App() {
           <input type="file" accept="image/*" onChange={handleFileChange} />
           <button onClick={sendImage}>Send Image</button>
         </div>
-        <div>
-          <h2>업로드 이미지:</h2>
-          {uploadedImageURL && (
-            <img
-              src={uploadedImageURL}
-              style={{ maxWidth: "300px", maxHeight: "300px" }}
-            />
-          )}
-        </div>
-        <div>
-          <h2>수신 이미지:</h2>
-          {receivedImageURL && (
-            <img
-              src={receivedImageURL}
-              style={{ maxWidth: "300px", maxHeight: "300px" }}
-            />
-          )}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+          <div>
+            <h2>업로드 이미지:</h2>
+            {uploadedImageURL && (
+              <img
+                src={uploadedImageURL}
+                style={{ maxWidth: "300px", maxHeight: "300px" }}
+              />
+            )}
+          </div>
+          <div>
+            <h2>수신 이미지:</h2>
+            {receivedImageURL && (
+              <img
+                src={receivedImageURL}
+                style={{ maxWidth: "300px", maxHeight: "300px" }}
+              />
+            )}
+          </div>
         </div>
       </section>
     </div>
