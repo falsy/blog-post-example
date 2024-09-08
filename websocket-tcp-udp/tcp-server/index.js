@@ -1,8 +1,6 @@
 const net = require("net")
 
 const tcpServer = net.createServer((socket) => {
-  console.log("TCP 연결")
-
   socket.on("data", (data) => {
     console.log(`TCP 요청: ${data}`)
     socket.write(`TCP 응답: ${data}`)

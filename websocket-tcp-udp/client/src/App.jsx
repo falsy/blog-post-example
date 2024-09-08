@@ -10,6 +10,7 @@ export default function App() {
 
   const sendMessage = () => {
     ws.current.send(message)
+    setMessage("")
   }
 
   useEffect(() => {
@@ -20,7 +21,7 @@ export default function App() {
     }
 
     ws.current.onmessage = (event) => {
-      console.log("message", event.data)
+      console.log(event.data)
     }
 
     return () => {
@@ -32,18 +33,25 @@ export default function App() {
 
   return (
     <div>
-      <div>
-        <h1>TCP / UDP</h1>
-      </div>
-      <div>
-        <input
-          type="text"
-          placeholder="message"
-          value={message}
-          onChange={handleChange}
-        />
-        <button onClick={sendMessage}>Send</button>
-      </div>
+      <section>
+        <div>
+          <h2>TCP / UDP</h2>
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="message"
+            value={message}
+            onChange={handleChange}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                sendMessage()
+              }
+            }}
+          />
+          <button onClick={sendMessage}>Send</button>
+        </div>
+      </section>
     </div>
   )
 }
