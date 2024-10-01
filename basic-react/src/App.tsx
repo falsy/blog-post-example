@@ -1,5 +1,7 @@
 import { lazy, Suspense, useState } from "react"
 import Portal from "./Portal"
+import Batching from "./Batching"
+import Batching2 from "./Batching2"
 
 const LazyComponent = lazy(() => import("./LazyComponent"))
 
@@ -21,6 +23,11 @@ export default function App() {
             <LazyComponent />
           </Suspense>
         )}
+      </section>
+      <section>
+        <h2>Batching</h2>
+        <Batching />
+        <Batching2 />
       </section>
     </div>
   )
