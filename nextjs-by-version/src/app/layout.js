@@ -39,6 +39,9 @@ export default function RootLayout({ children }) {
               <li>
                 <Link href="/parallel">parallel</Link>
               </li>
+              <li>
+                <Link href="/actions">actions</Link>
+              </li>
             </ul>
           </nav>
         </header>
