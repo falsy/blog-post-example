@@ -27,5 +27,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     let windowController = NSWindowController(window: newWindow)
     windowController.showWindow(self)
+    
+    // 기본 타이틀바 숨김
+    newWindow.titlebarAppearsTransparent = true
+    newWindow.titleVisibility = .hidden
+    
+    // 닫기, 최소화, 최대화 버튼의 여백을 키움
+    newWindow.toolbar = NSToolbar()
   }
 }

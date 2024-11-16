@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class ToolbarViewController: NSTitlebarAccessoryViewController {  
+class ToolbarViewController: NSTitlebarAccessoryViewController {
   override func loadView() {
     let hostingView = NSHostingView(rootView: CustomToolbarView())
     self.view = hostingView
