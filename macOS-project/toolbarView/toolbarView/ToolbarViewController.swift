@@ -7,17 +7,8 @@
 
 import SwiftUI
 
-class ToolbarViewController: NSTitlebarAccessoryViewController {
-  init() {
-    super.init(nibName: nil, bundle: nil)
-    self.setupView()
-  }
-  
-  required init?(coder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
-  
-  private func setupView() {
+class ToolbarViewController: NSTitlebarAccessoryViewController {  
+  override func loadView() {
     let hostingView = NSHostingView(rootView: CustomToolbarView())
     self.view = hostingView
   }
