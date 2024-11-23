@@ -20,39 +20,31 @@ app.use(
 
 const wss = new WebSocketServer({ noServer: true })
 
-interface Client {
-  id: string
-  socket: WebSocket
-}
-
-const clients: Client[] = []
+const clients: Map<string, WebSocket> = new Map()
 
 wss.on("connection", (socket) => {
   const clientId = Math.random().toString(36).substring(2, 9)
-  clients.push({ id: clientId, socket })
+  clients.set(clientId, socket)
+  console.log(`클라이언트 ${clientId} 연결됨`)
 
   socket.on("message", (message) => {
-    const parsedMessage = JSON.parse(message.toString())
+    const data = JSON.parse(message.toString())
+    const { to } = data
 
-    clients.forEach((client) => {
-      if (
-        client.socket !== socket &&
-        client.socket.readyState === WebSocket.OPEN
-      ) {
-        client.socket.send(
-          JSON.stringify({
-            ...parsedMessage,
-            from: clientId
-          })
-        )
+    if (clients.has(to)) {
+      const targetSocket = clients.get(to)
+      if (targetSocket && targetSocket.readyState === WebSocket.OPEN) {
+        targetSocket.send(JSON.stringify({ ...data, from: clientId }))
       }
-    })
+    }
   })
 
   socket.on("close", () => {
-    const index = clients.findIndex((client) => client.id === clientId)
-    if (index !== -1) clients.splice(index, 1)
+    console.log(`클라이언트 연결 종료: ${clientId}`)
+    clients.delete(clientId)
   })
+
+  socket.send(JSON.stringify({ type: "join", id: clientId }))
 })
 
 const server = app.listen(7777, () => {
