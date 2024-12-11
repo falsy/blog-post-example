@@ -1,5 +1,5 @@
 import { useAtom } from "../libs/zutai"
-import { stepAtom } from "../hooks/useStepper"
+import { stepAtom } from "../atoms/stepAtom"
 import ChildZotai from "./ChildZotai"
 
 export default function Zotai() {
