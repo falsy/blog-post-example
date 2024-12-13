@@ -16,7 +16,7 @@ export default function ActionState() {
 
   const [state, action, pending] = useActionState(
     async (previousState, newState) => {
-      const res = await updateName(newState.nam)
+      const res = await updateName(newState.name)
       return res
     },
     { name: "" }

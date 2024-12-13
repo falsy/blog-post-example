@@ -6,6 +6,8 @@ import FormStatus from "./components/FormStatus"
 import Optimistic from "./components/Optimistic"
 import UseHook from "./components/UseHook"
 import ConditionUseHook from "./components/ConditionUseHook"
+import ParentRef from "./components/ParentRef"
+import ProviderComp from "./components/ProviderComp"
 
 export default function App() {
   return (
@@ -41,6 +43,16 @@ export default function App() {
       <section>
         <h2>conditionally use</h2>
         <ConditionUseHook />
+      </section>
+      <section>
+        <h2>ref</h2>
+        <ParentRef />
+      </section>
+      <section>
+        <h2>Provider</h2>
+        <ProviderComp>
+          <p>provider</p>
+        </ProviderComp>
       </section>
     </div>
   )
