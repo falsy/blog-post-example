@@ -26,6 +26,7 @@ export default function Optimistic() {
   const [isPending, startTransition] = useTransition()
 
   const handleSubmit = () => {
+    setError(false)
     startTransition(async () => {
       setOptimisticName(name)
       try {
