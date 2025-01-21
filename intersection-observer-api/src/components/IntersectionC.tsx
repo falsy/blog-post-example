@@ -1,4 +1,4 @@
-import { RefObject, useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export default function IntersectionC() {
   const [isVisible, setIsVisible] = useState(false)
