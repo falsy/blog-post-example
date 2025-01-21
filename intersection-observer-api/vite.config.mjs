@@ -5,9 +5,7 @@ export default defineConfig({
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".mjs"]
   },
-  plugins: [
-    react()
-  ],
+  plugins: [react()],
   server: {
     port: 4000,
     open: true,
