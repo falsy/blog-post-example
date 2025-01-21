@@ -1,15 +1,15 @@
 import { RefObject, useEffect, useRef, useState } from "react"
 
 export default function IntersectionD({
-  ref: containerRef
+  ref
 }: {
   ref: RefObject<HTMLDivElement | null>
 }) {
   const [isVisible, setIsVisible] = useState(false)
-  const ref = useRef<HTMLDivElement>(null)
+  const targetRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (!containerRef.current) return
+    if (!ref.current) return
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -17,25 +17,25 @@ export default function IntersectionD({
       },
       {
         threshold: 1,
-        root: containerRef.current,
+        root: ref.current,
         rootMargin: "100px 0px 0px 0px"
       }
     )
 
-    if (ref.current) {
-      observer.observe(ref.current)
+    if (targetRef.current) {
+      observer.observe(targetRef.current)
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current)
+      if (targetRef.current) {
+        observer.unobserve(targetRef.current)
       }
     }
   }, [])
 
   return (
     <div
-      ref={ref}
+      ref={targetRef}
       className={`items ${isVisible ? "visible" : "hidden"}`}
       style={{ backgroundColor: "lightseagreen" }}
     >
