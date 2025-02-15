@@ -1,0 +1,25 @@
+{
+  "name": "rsc-koa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "babel src/server.js --out-file dist/server.cjs",
+    "start": "node --experimental-modules dist/server.cjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@koa/router": "^13.1.0",
+    "koa": "^2.15.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.9",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3"
+  }
+}
