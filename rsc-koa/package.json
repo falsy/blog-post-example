@@ -4,8 +4,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "babel src/server.js --out-file dist/server.cjs",
-    "start": "node --experimental-modules dist/server.cjs"
+    "build": "babel src --out-dir dist --extensions \".js,.jsx\"",
+    "start": "node dist/server/index.js"
   },
   "author": "",
   "license": "ISC",
