@@ -40,7 +40,6 @@ router.get("/", async (ctx) => {
         reject()
       },
       onError(error) {
-        didError = true
         console.error(error)
         reject()
       },
