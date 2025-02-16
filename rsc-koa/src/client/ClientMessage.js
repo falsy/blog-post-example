@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function ClientComponent() {
+export default function ClientMessage() {
   const [count, setCount] = useState(0)
 
   return (

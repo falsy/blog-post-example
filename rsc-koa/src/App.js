@@ -1,4 +1,5 @@
-import ClientComponent from "./client/ClientComponent.js"
+import ClientMessage from "./client/ClientMessage.js"
+import ServerMessage from "./server/ServerMessage.server.js"
 
 export default function App() {
   return (
@@ -12,11 +13,11 @@ export default function App() {
           <h1>React Server Component</h1>
           <section>
             <h2>Server</h2>
-            <p>This component was rendered on the server.</p>
+            <ServerMessage />
           </section>
           <section>
             <h2>Client</h2>
-            <ClientComponent />
+            <ClientMessage />
           </section>
         </div>
       </body>
