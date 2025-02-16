@@ -1,8 +1,8 @@
-import { useState } from "react"
+import { useMemo } from "react"
 import ClientMessage from "../components/ClientMessage.js"
 
 export default function App() {
-  const [message, setMessage] = useState(() => {
+  const message = useMemo(() => {
     const dataEl = document.getElementById("server-data")
     if (dataEl) {
       try {
@@ -14,7 +14,7 @@ export default function App() {
       }
     }
     return ""
-  })
+  }, [])
 
   return (
     <html lang="en">
