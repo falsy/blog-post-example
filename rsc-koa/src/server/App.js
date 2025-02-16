@@ -1,5 +1,6 @@
-import ClientMessage from "./client/ClientMessage.js"
-import ServerMessage from "./server/ServerMessage.server.js"
+import ClientMessage from "../components/ClientMessage.js"
+import DataFetch from "./DataFetch.server.js"
+import ServerMessage from "./ServerMessage.server.js"
 
 export default function App() {
   return (
@@ -10,7 +11,7 @@ export default function App() {
       </head>
       <body>
         <div id="root">
-          <h1>React Server Component</h1>
+          <h1>React Server Component Example</h1>
           <section>
             <h2>Server</h2>
             <ServerMessage />
@@ -18,6 +19,10 @@ export default function App() {
           <section>
             <h2>Client</h2>
             <ClientMessage />
+          </section>
+          <section>
+            <h2>Data Fetch</h2>
+            <DataFetch />
           </section>
         </div>
       </body>

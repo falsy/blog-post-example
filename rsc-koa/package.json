@@ -6,7 +6,7 @@
   "scripts": {
     "build:server": "babel src --out-dir dist --extensions \".js,.jsx\"",
     "build:client": "webpack --config webpack.config.cjs",
-    "build": "npm run build:client && npm run build:server",
+    "build": "npm run build:server && npm run build:client",
     "start": "node dist/server/index.js"
   },
   "author": "",
