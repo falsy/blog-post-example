@@ -1,34 +1,28 @@
 import Koa from "koa"
 import Router from "@koa/router"
+import serve from "koa-static"
+import path from "path"
+import { fileURLToPath } from "url"
 import { renderToPipeableStream } from "react-dom/server"
-
-function ServerComponent() {
-  return (
-    <html leng="en">
-      <head>
-        <meta charSet="utf-8" />
-        <title>Koa + React Server Component Example</title>
-      </head>
-      <body>
-        <h1>React Server Component</h1>
-        <p>This component was rendered on the server.</p>
-      </body>
-    </html>
-  )
-}
+import App from "../App.js"
 
 const app = new Koa()
 const router = new Router()
 
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+app.use(serve(path.resolve(__dirname, "../../dist")))
+
 router.get("/", (ctx) => {
-  const { pipe } = renderToPipeableStream(<ServerComponent />, {
+  const { pipe } = renderToPipeableStream(<App />, {
+    bootstrapModules: ["/client/client.bundle.js"],
     onShellReady() {
       ctx.type = "text/html"
       ctx.status = 200
       pipe(ctx.res)
     },
     onError(error) {
-      console.error("An error occurred while rendering: ", error)
+      console.error("An error occurred while rendering:", error)
       ctx.throw(500, "Server rendering error")
     },
   })
