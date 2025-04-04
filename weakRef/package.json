@@ -7,6 +7,6 @@
     "server": "node --expose-gc src/index.js"
   },
   "devDependencies": {
-    "vite": "^6.2.4"
+    "vite": "^6.2.5"
   }
 }
