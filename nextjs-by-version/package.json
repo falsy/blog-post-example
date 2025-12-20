@@ -7,7 +7,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "^15.5.7",
+    "next": "^15.5.9",
     "react": "19.0.0-rc-ed15d500-20241110",
     "react-dom": "19.0.0-rc-ed15d500-20241110"
   }
